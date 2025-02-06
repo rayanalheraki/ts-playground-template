@@ -1,1 +1,14 @@
-console.log("Hello world!");
+import express from "express";
+
+const app = express();
+const port = 3000;
+
+app.get("/", (req, res) => {
+  res.send("Hello TypeScript!");
+});
+
+console.log(`Hello, Welcome to TypeScript!`);
+
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
+});
